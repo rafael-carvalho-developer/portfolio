@@ -30,9 +30,6 @@ export default function Home() {
         </div>
         <a href="CV - Rafael Carvalho.pdf" download className="home-btn">Download CV</a>
       </div>
-      <div className="home-img">
-        <img src="images/portfolio1.jpg" alt="Rafael Carvalho" />
-      </div>
     </section>
   );
 }

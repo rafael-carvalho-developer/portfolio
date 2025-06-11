@@ -41,6 +41,7 @@ export default function Header() {
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
+        <a href="/admin">Admin</a>
       </nav>
     </header>
   );
