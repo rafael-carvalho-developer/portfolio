@@ -431,11 +431,47 @@ section {
   cursor: pointer;
 }
 
-.login-page form {
+.login-card {
   background: var(--bg-color);
-  padding: 2rem;
-  box-shadow: 0 0 1rem var(--main-color);
+  padding: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.admin-container {
+  background: var(--bg-color);
+  padding: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.project-list {
+  list-style: none;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.project-item {
+  background: var(--second-bg-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project-item button {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
 /* BREAKPOINTS */
