@@ -97,7 +97,7 @@ section {
   cursor: pointer;
   position: fixed;
   right: 2rem;
-  bottom: 2rem;
+  top: 2rem;
   margin: 0;
   z-index: 1000;
 }
