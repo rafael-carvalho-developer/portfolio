@@ -16,7 +16,7 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
-  --second-color: #ff1401;
+  --second-color: #0ef;
 }
 
 html {
@@ -42,7 +42,7 @@ section {
   padding: 2rem 9%;
   background: var(--bg-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
 }
@@ -51,22 +51,23 @@ section {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  font-size: 2.5rem;
-  color: var(--text-color);
-  font: 600;
-  cursor: default;
-}
 
 .navbar a {
   font-size: 1.7rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
+}
+
+.navbar a i {
+  font-size: 2rem;
 }
 
 #menu-icon {
@@ -422,6 +423,13 @@ section {
   color: var(--second-bg-color);
   font-weight: 600;
   cursor: pointer;
+}
+
+.login-page form {
+  background: var(--bg-color);
+  padding: 2rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  border-radius: 1rem;
 }
 
 /* BREAKPOINTS */

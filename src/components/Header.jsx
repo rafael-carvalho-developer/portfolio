@@ -29,19 +29,32 @@ export default function Header() {
 
   return (
     <header className="header">
-      <a href="#" className="logo">Rafael Carvalho</a>
       <i
         id="menu-icon"
         className={`bx ${menuOpen ? 'bx-x' : 'bx-menu'}`}
         onClick={() => setMenuOpen(!menuOpen)}
       ></i>
       <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
-        <a href="#home" className="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <a href="/admin">Admin</a>
+        <a href="#home" className="active">
+          <i className="bx bx-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about">
+          <i className="bx bx-user"></i>
+          <span>About</span>
+        </a>
+        <a href="#services">
+          <i className="bx bx-briefcase"></i>
+          <span>Services</span>
+        </a>
+        <a href="#portfolio">
+          <i className="bx bx-book"></i>
+          <span>Portfolio</span>
+        </a>
+        <a href="#contact">
+          <i className="bx bx-mail-send"></i>
+          <span>Contact</span>
+        </a>
       </nav>
     </header>
   );

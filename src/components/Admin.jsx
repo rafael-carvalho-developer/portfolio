@@ -34,7 +34,7 @@ export default function Admin() {
 
   if (!session) {
     return (
-      <section className="admin">
+      <section className="admin login-page">
         <h2>Admin Login</h2>
         <form onSubmit={handleLogin}>
           <input name="email" type="email" placeholder="Email" />
