@@ -6,7 +6,6 @@ import About from './components/About';
 import Services from './components/Services';
 import Skills from './components/Skills';
 import Timeline from './components/Timeline';
-import Stats from './components/Stats';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
@@ -37,7 +36,6 @@ function App() {
       <Services />
       <Skills />
       <Timeline />
-      <Stats />
       <Portfolio />
       <Contact />
     </div>

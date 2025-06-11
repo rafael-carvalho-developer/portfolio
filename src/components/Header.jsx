@@ -76,10 +76,6 @@ export default function Header({ dark, setDark }) {
           <i className="bx bx-timer"></i>
           <span>Journey</span>
         </a>
-        <a href="#stats">
-          <i className="bx bx-bar-chart"></i>
-          <span>Stats</span>
-        </a>
         <a href="#portfolio">
           <i className="bx bx-book"></i>
           <span>Portfolio</span>
