@@ -4,7 +4,7 @@ import { supabase } from '../supabaseClient';
 
 export default function Home() {
   const [name, setName] = useState('Rafael Carvalho');
-  const [desc, setDesc] = useState("I'm a 24-year-old developer with over 3 years of experience in full stack web development and the Microsoft Power Platform.");
+  const [desc, setDesc] = useState('');
 
   useEffect(() => {
     const typed = new Typed('.multiple-text', {
@@ -46,7 +46,6 @@ export default function Home() {
           <a href="https://github.com/rafael-carvalho-developer"><i className="bx bxl-github"></i></a>
           <a href="https://www.linkedin.com/in/rafael-carvalho-developer/"><i className="bx bxl-linkedin"></i></a>
         </div>
-        <a href="CV - Rafael Carvalho.pdf" download className="home-btn">Download CV</a>
       </div>
     </section>
   );

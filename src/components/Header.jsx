@@ -64,21 +64,17 @@ export default function Header({ dark, setDark }) {
           <i className="bx bx-user"></i>
           <span>About</span>
         </a>
-        <a href="#services">
-          <i className="bx bx-briefcase"></i>
-          <span>Services</span>
-        </a>
         <a href="#skills">
           <i className="bx bx-code"></i>
           <span>Skills</span>
         </a>
-        <a href="#timeline">
-          <i className="bx bx-timer"></i>
-          <span>Journey</span>
+        <a href="#services">
+          <i className="bx bx-briefcase"></i>
+          <span>Services</span>
         </a>
         <a href="#portfolio">
           <i className="bx bx-book"></i>
-          <span>Portfolio</span>
+          <span>Projects</span>
         </a>
         <a href="#contact">
           <i className="bx bx-mail-send"></i>

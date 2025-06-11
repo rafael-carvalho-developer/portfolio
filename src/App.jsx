@@ -5,7 +5,6 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Skills from './components/Skills';
-import Timeline from './components/Timeline';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
@@ -21,7 +20,7 @@ function App() {
     sr.reveal('.home-content, .heading', { origin: 'top' });
     sr.reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
     sr.reveal('.home-content h1, .about-img', { origin: 'left' });
-    sr.reveal('.home-content p, .about-content, .timeline-list li', { origin: 'right' });
+    sr.reveal('.home-content p, .about-content', { origin: 'right' });
   }, []);
 
   useEffect(() => {
@@ -33,9 +32,8 @@ function App() {
       <Header dark={dark} setDark={setDark} />
       <Home />
       <About />
-      <Services />
       <Skills />
-      <Timeline />
+      <Services />
       <Portfolio />
       <Contact />
     </div>
