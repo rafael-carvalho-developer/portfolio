@@ -591,6 +591,14 @@ section {
   cursor: pointer;
 }
 
+.upload-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* BREAKPOINTS */
 
 @media (max-width: 1200px) {

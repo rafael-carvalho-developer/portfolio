@@ -1,6 +1,7 @@
 # Portfolio React Project
 
 This portfolio site is built with React and Vite. It uses Supabase for managing dynamic content such as the Latest Project section.
+The admin area also lets you upload files to a Supabase Storage bucket.
 
 ## Setup
 

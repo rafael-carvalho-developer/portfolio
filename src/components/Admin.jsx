@@ -11,6 +11,8 @@ export default function Admin() {
   const [homeName, setHomeName] = useState('');
   const [homeDesc, setHomeDesc] = useState('');
   const [aboutDesc, setAboutDesc] = useState('');
+  const [file, setFile] = useState(null);
+  const [uploadedUrl, setUploadedUrl] = useState('');
 
   useEffect(() => {
     async function loadSession() {
@@ -104,6 +106,19 @@ export default function Admin() {
     setProjects(projects.filter((p) => p.id !== id));
   }
 
+  async function handleUpload() {
+    if (!file) return;
+    const filePath = `public/${Date.now()}-${file.name}`;
+    const { error } = await supabase.storage.from('uploads').upload(filePath, file);
+    if (!error) {
+      const { data } = supabase.storage.from('uploads').getPublicUrl(filePath);
+      setUploadedUrl(data.publicUrl);
+      setFile(null);
+    } else {
+      console.error(error);
+    }
+  }
+
   if (!session) {
     return (
       <section className="admin login-page">
@@ -152,6 +167,19 @@ export default function Admin() {
           ></textarea>
           <button type="submit">Save Content</button>
         </form>
+        <h2>Upload File</h2>
+        <div className="upload-form">
+          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+          <button type="button" onClick={handleUpload}>Upload</button>
+        </div>
+        {uploadedUrl && (
+          <p>
+            Uploaded:&nbsp;
+            <a href={uploadedUrl} target="_blank" rel="noreferrer">
+              {uploadedUrl}
+            </a>
+          </p>
+        )}
         <h2>Manage Projects</h2>
         <form onSubmit={handleSubmit}>
           <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
