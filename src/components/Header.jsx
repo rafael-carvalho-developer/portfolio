@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { supabase } from '../supabaseClient';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [maintenance, setMaintenance] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,26 @@ export default function Header() {
       setMenuOpen(false);
     };
     window.addEventListener('scroll', handleScroll);
+    async function fetchMaintenance() {
+      const { data } = await supabase
+        .from('settings')
+        .select('value')
+        .eq('key', 'maintenance')
+        .single();
+      if (data) setMaintenance(data.value === 'true');
+    }
+    fetchMaintenance();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header className="header">
+      {maintenance && (
+        <div className="maintenance-alert">
+          <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="maintenance" />
+          <span>Website in maintenance</span>
+        </div>
+      )}
       <i
         id="menu-icon"
         className={`bx ${menuOpen ? 'bx-x' : 'bx-menu'}`}

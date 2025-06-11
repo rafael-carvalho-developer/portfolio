@@ -431,6 +431,46 @@ section {
   cursor: pointer;
 }
 
+.logout-btn {
+  align-self: flex-end;
+  margin-bottom: 2rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.admin textarea {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  min-height: 8rem;
+}
+
+.maintenance-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--second-bg-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  z-index: 200;
+}
+
+.maintenance-alert img {
+  width: 2rem;
+  height: 2rem;
+}
+
 .login-card {
   background: var(--bg-color);
   padding: 3rem;
