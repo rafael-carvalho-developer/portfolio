@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../supabaseClient';
 
-export default function Header() {
+export default function Header({ dark, setDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [maintenance, setMaintenance] = useState(false);
 
@@ -51,6 +51,10 @@ export default function Header() {
         className={`bx ${menuOpen ? 'bx-x' : 'bx-menu'}`}
         onClick={() => setMenuOpen(!menuOpen)}
       ></i>
+      <i
+        className={`bx ${dark ? 'bx-moon' : 'bx-sun'} theme-toggle`}
+        onClick={() => setDark(!dark)}
+      ></i>
       <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
         <a href="#home" className="active">
           <i className="bx bx-home"></i>
@@ -63,6 +67,18 @@ export default function Header() {
         <a href="#services">
           <i className="bx bx-briefcase"></i>
           <span>Services</span>
+        </a>
+        <a href="#skills">
+          <i className="bx bx-code"></i>
+          <span>Skills</span>
+        </a>
+        <a href="#timeline">
+          <i className="bx bx-timer"></i>
+          <span>Journey</span>
+        </a>
+        <a href="#stats">
+          <i className="bx bx-bar-chart"></i>
+          <span>Stats</span>
         </a>
         <a href="#portfolio">
           <i className="bx bx-book"></i>

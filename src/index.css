@@ -27,11 +27,20 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  scroll-snap-type: y mandatory;
+}
+
+body.light {
+  --bg-color: #fff;
+  --second-bg-color: #f0f0f0;
+  --text-color: #111;
 }
 
 section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
+  scroll-snap-align: start;
 }
 
 .header {
@@ -82,12 +91,23 @@ section {
   display: none;
 }
 
+.theme-toggle {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/images/portfolio1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -324,6 +344,65 @@ section {
 .portfolio-layer a i {
   font-size: 2rem;
   color: var(--second-bg-color);
+}
+
+.skills {
+  background: var(--second-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.timeline {
+  padding-top: 5rem;
+}
+
+.timeline-list {
+  list-style: none;
+  max-width: 70rem;
+  margin: auto;
+  position: relative;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--main-color);
+  border-radius: 50%;
+}
+
+.timeline-list li .year {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.stats {
+  background: var(--second-bg-color);
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.stats canvas {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .contact h2 {
