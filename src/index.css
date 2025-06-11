@@ -17,6 +17,7 @@
   --text-color: #fff;
   --main-color: #0ef;
   --second-color: #0ef;
+  --home-image: url('/images/dark.png');
 }
 
 html {
@@ -35,6 +36,7 @@ body.light {
   --bg-color: #fff;
   --second-bg-color: #f0f0f0;
   --text-color: #111;
+  --home-image: url('/images/light.png');
 }
 
 section {
@@ -97,7 +99,7 @@ section {
   cursor: pointer;
   position: fixed;
   right: 2rem;
-  bottom: 2rem;
+  top: 2rem;
   margin: 0;
   z-index: 1000;
 }
@@ -109,9 +111,11 @@ section {
   align-items: center;
   text-align: center;
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/images/portfolio1.jpg');
-  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), var(--home-image);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  transition: background-image 0.5s ease-in-out;
 }
 
 
