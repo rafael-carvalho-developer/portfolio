@@ -30,7 +30,7 @@ function App() {
   return (
     <div>
       <Header dark={dark} setDark={setDark} />
-      <Home />
+      <Home dark={dark} />
       <About />
       <Skills />
       <Services />
