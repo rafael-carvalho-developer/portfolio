@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Typed from 'typed.js';
 import { supabase } from '../supabaseClient';
 
-export default function Home() {
+export default function Home({ dark }) {
   const [name, setName] = useState('Rafael Carvalho');
   const [desc, setDesc] = useState('');
 
@@ -35,6 +35,16 @@ export default function Home() {
 
   return (
     <section className="home" id="home">
+      <img
+        src="/images/dark.png"
+        className={`home-bg ${dark ? 'active' : ''}`}
+        alt="dark background"
+      />
+      <img
+        src="/images/light.png"
+        className={`home-bg ${dark ? '' : 'active'}`}
+        alt="light background"
+      />
       <div className="home-content">
         <h3>Hello, my name is</h3>
         <h1>{name}</h1>
