@@ -113,18 +113,33 @@ section {
   overflow: hidden;
 }
 
-.home-bg {
+.home::before,
+.home::after {
+  content: '';
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.5s ease-in-out;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.home-bg.active {
+.home::before {
+  background-image: url('/images/dark.png');
+  opacity: 1;
+}
+
+.home::after {
+  background-image: url('/images/light.png');
+}
+
+body.light .home::before {
+  opacity: 0;
+}
+
+body.light .home::after {
   opacity: 1;
 }
 
