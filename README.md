@@ -8,10 +8,11 @@ This portfolio site is built with React and Vite. It uses Supabase for managing 
    ```bash
    npm install
    ```
-2. Copy `.env.example` to `.env` and fill in your Supabase credentials:
+2. Copy `.env.example` to `.env` and fill in your Supabase and RAWG credentials:
    ```bash
    cp .env.example .env
-   # edit .env with your SUPABASE_URL and SUPABASE_ANON_KEY
+   # edit .env with your SUPABASE_URL, SUPABASE_ANON_KEY
+   # and RAWG_API_KEY
    ```
 3. Start the development server:
    ```bash
